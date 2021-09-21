@@ -36,6 +36,12 @@ export function Home() {
       return;
     }
 
+    if(roomRef.val().endedAt) {
+      alert('Room already closed');
+
+      return;
+    }
+
     if (roomRef.val().endedAt) {
       alert('Room already closed.');
       return;
@@ -49,7 +55,7 @@ export function Home() {
       <aside>
         <img src={illustrationImg} alt="Ilustração simbolizando perguntas e respostas" />
         <strong>Crie salas de Q&amp;A ao-vivo</strong>
-        <p>Tire as dúvidas da sua aduiência em tempo real</p>
+        <p>Tire as dúvidas da sua audiência em tempo real</p>
       </aside>
       <main>
         <MainContent>
