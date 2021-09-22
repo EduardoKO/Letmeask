@@ -7,8 +7,21 @@ export const Container = styled.div`
   padding:24px;
   margin-bottom:24px;
 
+  &.highlighted {
+    background: #F4F0FF;
+    border: 1px solid #835AFD;
+    
+    footer .user-info span {
+      color: #29292E;
+    }
+  }
+  
+  &.answered {
+    background: #DBDCDD;
+  }
+
   p {
-    color:#29292e;
+    color: #29292e;
   }
 
   footer {
@@ -65,4 +78,4 @@ export const Container = styled.div`
       }
     }
   }
-`;
+`

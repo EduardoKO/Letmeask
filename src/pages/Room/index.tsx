@@ -93,7 +93,7 @@ export function Room() {
         <div className="question-list">
           {questions.map(question => {
             return (
-              <Question key={question.id} content={question.content} author={question.author}>
+              <Question isAnswered={question.isAnswered} isHighlighted={question.isHighlighted} key={question.id} content={question.content} author={question.author}>
                 <button className={`like-button ${question.likeId ? 'liked' : ''}`} onClick={() => handleLikeQuestion(question.id, question.likeId)} type="button" aria-label="Marcar como gostei"> 
                   {question.likeCount > 0 && <span>{question.likeCount}</span>}
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
